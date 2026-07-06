@@ -1,3 +1,6 @@
+using MyShop.DAL.Contexts;
+using Microsoft.EntityFrameworkCore;
+
 namespace MyShop
 {
     public class Program
