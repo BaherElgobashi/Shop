@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="MyShop.DAL/MyShop.DAL.csproj" />
   <Project Path="MyShop/MyShop.csproj" />
 </Solution>
