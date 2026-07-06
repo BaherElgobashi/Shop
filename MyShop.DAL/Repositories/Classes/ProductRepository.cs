@@ -27,23 +27,30 @@ namespace MyShop.DAL.Repositories.Classes
 
         public Product GetProductById(int id)
         {
-            throw new NotImplementedException();
+            var Product = _dbContext.Products.Find(id);
+            if (Product is null)
+                return null;
+            return Product;
         }
         public int Add(Product product)
         {
-            throw new NotImplementedException();
+            _dbContext.Products.Add(product);
+            return _dbContext.SaveChanges();
+        }
+        public int update(Product product)
+        {
+            _dbContext.Products.Update(product);
+            return _dbContext.SaveChanges();
         }
 
         public int Delete(Product product)
         {
-            throw new NotImplementedException();
+            _dbContext.Products.Remove(product);
+            return _dbContext.SaveChanges();
         }
 
 
 
-        public int update(Product product)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

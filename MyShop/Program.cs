@@ -1,5 +1,7 @@
 using MyShop.DAL.Contexts;
 using Microsoft.EntityFrameworkCore;
+using MyShop.DAL.Repositories.Interfaces;
+using MyShop.DAL.Repositories.Classes;
 
 namespace MyShop
 {
@@ -15,6 +17,8 @@ namespace MyShop
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
             builder.Configuration.GetConnectionString("DefaultConnection")
             ));
+
+            builder.Services.AddScoped<IProductRepository , ProductRepository>();
 
             var app = builder.Build();
 
