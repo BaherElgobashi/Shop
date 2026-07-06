@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ namespace myshop.Entities.Models
         public string Description { get; set; }
 
         [DisplayName("Image")]
-        [ValidateNever]
+        //[ValidateNever]
         public string Img { get; set; }
 
         [Required]
@@ -27,7 +27,7 @@ namespace myshop.Entities.Models
         [Required]
         [DisplayName("Category")]
         public int CategoryId { get; set; }
-        [ValidateNever]
+        //[ValidateNever]
         public Category Category { get; set; }
     }
 }
