@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using myshop.Entities.Models;
 
 namespace MyShop.DAL.Contexts
 {
@@ -13,5 +15,8 @@ namespace MyShop.DAL.Contexts
         {
             
         }
+
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
